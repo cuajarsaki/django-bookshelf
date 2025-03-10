@@ -1,4 +1,4 @@
-English | [日本語](./docs/Readme-ja.md) 
+[English](Readme.md) | 日本語
 
 <p align="left">
   <img src="https://img.shields.io/badge/-python-darkblue.svg?logo=python&style=flat">
@@ -9,55 +9,57 @@ English | [日本語](./docs/Readme-ja.md)
 
 # Django Bookshelf
 
-This repository contains the final project for the **Programming Language II Python** beginner course. 
+このリポジトリには、**プログラミング言語II Python**の最終課題である。
 
-The project is a **book management system** built using **Django**, designed to be used in a laboratory or study environment.
+このプロジェクトは、Djangoを使用して構築された書籍管理システムであり、研究室や学習環境で使用することを目的としています。
 
 ## 📌 Features
-- Built with **Django 3.2.16**
-- Uses **django-bootstrap5** for styling
-- Includes an **admin panel** for managing categories
-- No database initialization required (uses SQLite)
-- Simple installation with `pip install -r requirements.txt`
-- Run locally using `python manage.py runserver`
+- Django 3.2.16で構築
+- django-bootstrap5を使用したスタイリング
+- カテゴリ管理用の管理パネルを含む
+- データベースの初期化不要（SQLiteを使用）
+- `pip install -r requirements.txt`で簡単にインストール
+- `python manage.py runserver`でローカルで実行
 
 ## ⚙️ Installation & Setup
 
-### Prerequisites
+### 前提条件
 - Python 3.x
 - pip (Python package manager)
 
-### Setup
+### セットアップ
 
-1. **Clone the repository**:
+1. **リポジトリをクローンする**:
    ```sh
    git clone https://github.com/cuajarsaki/django-bookshelf.git
    cd django-bookshelf]
    ```
    
-2. **Install dependencies:**
+2. **依存関係をインストールする:**
    ```sh
    pip install -r requirements.txt
    ```
    
-3. **Run the development server:**
+3. **開発サーバーを実行する:**
    ```sh
    python manage.py runserver
    ```
    
-4. **Access the application:**
+4. **アプリケーションにアクセスする:**
 - Open `http://127.0.0.1:8000/` to view the book management system.
 - To access the admin panel, go to `http://127.0.0.1:8000/admin`
 - Admin credentials:
 - Username: `admin`
 - Password: `test_1234`
 
-## 🖥️ Project Screenshots
+## 🖥️ 実行画面
 
 ![image](https://github.com/user-attachments/assets/b360fa92-186f-4767-a6e4-33bef77ae4dd)
 
-## 🛠️ Project Structure
+## 🛠️ 構造
+
 ```mermaid
+
 flowchart TD
     subgraph Client
         Browser[Web Browser]
@@ -136,27 +138,27 @@ flowchart TD
     ListV -->|queryset| BookM
 ```
 
-## ⚠️ Database Management
-- The project uses SQLite as the default database.
-- If you want to reset the database, delete the db.sqlite3 file from the project directory.
+## ⚠️ データベース管理
+- このプロジェクトは、デフォルトのデータベースとしてSQLiteを使用しています。
+- データベースをリセットするには、プロジェクトディレクトリからdb.sqlite3ファイルを削除します。
 
-## 🏗️ Technology Stack
+## 🏗️ 技術スタック
 - Django 3.2.16
 - django-bootstrap-form
 - django-bootstrap5
 - dj-static
 - python-decouple
 
-## 🤔Considerations
-I chose Django over Bottle for this project because:
-1. Django offers a wide range of built-in features for web applications
-2. Strong security measures
-3. High scalability
-4. Easier maintenance after graduation
-5. Good documentation and community support
+## 🤔考慮事項
+このプロジェクトでDjangoをBottleの代わりに選んだ理由：
 
-Additionally, the category management feature is available through the admin panel for convenient editing.
+1. Djangoはウェブアプリケーション向けの多くの組み込み機能を提供
+2. 高いセキュリティ対策
+3. 高いスケーラビリティ
+4. 良好なドキュメントとコミュニティサポート
 
-## 🏫 About
-- Course: Programming Language II (Python)
-- Year: 2023
+さらに、カテゴリ管理機能は管理パネルを通じて簡単に編集できます。
+
+## 🏫 この課題について
+- コース：プログラミング言語II（Python）
+- 年度：2023
