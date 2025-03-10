@@ -1,0 +1,36 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+ <div class="content-wrapper">
+   <div class="container-fluid">
+
+     <!-- Breadcrumbs-->
+     <ol class="breadcrumb">
+       <li class="breadcrumb-item">
+         <a href="{% url 'book:book_list' %}">TOP</a>
+       </li>
+       <li class="breadcrumb-item active">本の登録アプリ</li>
+     </ol>
+
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <h3>データ削除</h3>
+        </div>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="container-fluid">
+          <p>本名「 {{ object }} 」 のデータを削除していいですか?</p>
+
+          <form method="post">
+            <button class="btn btn-danger">削除する</button>
+            <a class="btn btn-info" href="{% url 'book:book_list' %}">リストに戻る</a>
+             {% csrf_token %}
+           </form>
+         </div>
+       </div>
+
+   </div>
+ </div>
+{% endblock %}

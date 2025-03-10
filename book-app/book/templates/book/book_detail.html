@@ -1,0 +1,100 @@
+{% extends 'book/base.html' %}
+
+{% load bootstrap %}
+{% block content %}
+
+ <form method="post">
+   <div class="container">
+
+     <div class="row">
+       <div class="col-12">
+         <div class="content-wrapper">
+           <div class="container-fluid">
+
+             <!-- Breadcrumbs-->
+             <ol class="breadcrumb">
+               <li class="breadcrumb-item">
+                 <a href="{% url 'book:book_list' %}">TOP</a>
+               </li>
+               <li class="breadcrumb-item active">本の登録アプリ</li>
+               <li class="breadcrumb-item active">データ動画表示（最近の５件）</li>
+             </ol>
+
+            <h3>{{ book.title }}の詳細</h3>
+
+            <div class="table-responsive">
+            <table id=book_list width="100%" class="table table-striped table-bordered table-hover">
+                <tr>
+                  <th>項目</th>
+                  <th>値</th>
+                </tr>
+
+                <tr>
+                  <td>登録日時</td>
+                  <td>{{ book.created_at }}</td>
+                </tr>
+                <tr>
+                  <td>更新日時</td>
+                  <td>{{ book.updated_at }}</td>
+                </tr>
+                <tr>
+                  <td>タイトル</td>
+                  <td>{{ book.title }}</td>
+                </tr>
+                <tr>
+                  <td>著者名</td>
+                  <td>{{ book.author }}</td>
+                </tr>
+                <tr>
+                  <td>出版社</td>
+                  <td>{{ book.publisher }}</td>
+                </tr>
+                <tr>
+                  <td>購入日</td>
+                  <td>{{ book.buydate }}</td>
+                </tr>
+                <tr>
+                  <td>カテゴリ</td>
+                  <td>{{ book.category }}</td>
+                </tr>
+                <tr>
+                  <td>本のURL</td>
+                  <td>{{ book.url }}</td>
+                </tr>
+                <tr>
+                  <td>本の貸し出し回数</td>
+                  <td>{{ book.rental }}</td>
+                </tr>
+                <tr>
+                  <td>貸し出しメールアドレス</td>
+                  <td>{{ book.email }}</td>
+                </tr>
+                <tr>
+                  <td>メモ</td>
+                  <td>{{ book.memo }}</td>
+                </tr>
+                <tr>
+                  <td>書評コメント</td>
+                  <td>{{ book.comment }}</td>
+                </tr>
+            </table>
+            </div>
+
+
+             <div class="row">
+               <div class="col-12">
+                 <a class="btn btn-info" href="{% url 'book:book_list' %}">リストに戻る</a>
+               </div>
+             </div>
+
+          </div>
+        </div>
+      </div>
+   </div>
+
+ </div>
+  {% csrf_token %}
+</form>
+
+
+{% endblock %}
